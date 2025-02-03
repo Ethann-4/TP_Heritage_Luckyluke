@@ -151,12 +151,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Brigand.cpp" />
     <ClCompile Include="Cowboy.cpp" />
     <ClCompile Include="Dame.cpp" />
     <ClCompile Include="Humain.cpp" />
     <ClCompile Include="TP_Heritage_Luckyluke.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Brigand.h" />
     <ClInclude Include="Cowboy.h" />
     <ClInclude Include="Dame.h" />
     <ClInclude Include="Humain.h" />

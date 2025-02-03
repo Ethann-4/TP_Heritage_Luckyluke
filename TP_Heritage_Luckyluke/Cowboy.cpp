@@ -1,10 +1,10 @@
 #include "Cowboy.h"
 
-Cowboy::Cowboy(const string nom, const string surnom, const string boissonFavorite)
-	: Humain(nom, boissonFavorite), surnom(surnom) {}
+Cowboy::Cowboy(const string nom, const string qualite, const string boissonFavorite)
+	: Humain(nom, boissonFavorite), qualite(qualite) {}
 
 void Cowboy::sePresente() const {
-	cout << "(" << nom << ") -- Bonjour, on m'appelle " << surnom
+	cout << "(" << nom << ") -- Bonjour, on m'appelle " << qualite
 		<< ", je suis " << nom << " et j'aime le " << boissonFavorite << "." << endl;
 }
 
