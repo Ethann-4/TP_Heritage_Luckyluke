@@ -13,7 +13,7 @@ public:
 	string getEtat() const;
 
 	void sePresente() const;
-	void changeDeRobe(const string& nouvelleCouleur);
+	void changeDeRobe(const string nouvelleCouleur);
 	void boit() const;
 
 private:

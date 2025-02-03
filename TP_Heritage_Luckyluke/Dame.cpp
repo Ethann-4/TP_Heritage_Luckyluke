@@ -16,7 +16,7 @@ void Dame::sePresente() const {
 		<< " et j'ai une jolie robe " << couleurRobe << "." << endl;
 }
 
-void Dame::changeDeRobe(const string& nouvelleCouleur) {
+void Dame::changeDeRobe(const string nouvelleCouleur) {
 	couleurRobe = nouvelleCouleur;
 	cout << "(" << nom << ") -- Regardez ma nouvelle robe " << couleurRobe << " !" << endl;
 }
