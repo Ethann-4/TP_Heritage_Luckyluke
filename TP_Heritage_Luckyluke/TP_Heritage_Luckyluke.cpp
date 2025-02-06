@@ -4,6 +4,7 @@
 #include "Humain.h"
 #include "Dame.h"
 #include "Cowboy.h"
+#include "Brigand.h"
 using namespace std;
 
 int main() {
@@ -20,19 +21,33 @@ int main() {
 	joe->boit();
 	delete joe;
 
-	Cowboy cowboyLucky("Lucky Luke", "le Cow-boy Solitaire");
+	Cowboy cowboyLucky("Lucky Luke", "le vaillant", "le coco-cola");
 	Dame jenny("Jenny", "lait", "blanche");
-	cout << "Une histoire sur lucky luke le cowboy" << endl;
+	Brigand brigandJoe("Joe", "tord-boyaux", "mechant", 100);
+
+	cout << "Histoire------3" << endl;
 	cowboyLucky.sePresente();
 	jenny.sePresente();
+	brigandJoe.sePresente();
 
-	jenny.changeDeRobe("verte");
-	cowboyLucky.boit();
-	jenny.boit();
+	cout << "**Miss Jenny hurle**" << endl;
+	jenny.seFaireKidnapper();
+	brigandJoe.kidnappe(jenny);
+
+	cowboyLucky.sePresente();
+	brigandJoe.sePresente();
+	brigandJoe.prix();
+	brigandJoe.nbDame();
+
+	cout << "**Le vaillant Lucky Luke tire sur Joe**" << endl;
+	cowboyLucky.tire(brigandJoe);
+	cowboyLucky.emprisonne(brigandJoe);
+	brigandJoe.seFaitEmprisonner(cowboyLucky);
+	cowboyLucky.libere(jenny);
+	jenny.seFaitLiberer(cowboyLucky);
 
 	return 0;
 }
-
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
 // Déboguer le programme : F5 ou menu Déboguer > Démarrer le débogage

@@ -1,10 +1,8 @@
 #include "Cowboy.h"
-
-// Constructeur
+#include "Dame.h"
 Cowboy::Cowboy(const string nom, const string qualite, const string boissonFavorite)
 	: Humain(nom, boissonFavorite), qualite(qualite), popularite(0) {}
 
-// Accesseurs
 int Cowboy::getPopularite() {
 	return popularite;
 }
@@ -22,8 +20,7 @@ void Cowboy::setQualite(const string qualite) {
 }
 
 void Cowboy::sePresente() const {
-	cout << "Bonjour, je suis " << getNom() << " et j'aime " << getBoissonFavorite() << "." << endl;
-	cout << "Je suis " << qualite << "." << endl;
+	cout << "(" << nom << ") -- "<< "Bonjour, je suis " << qualite << " " << getNom() << " et j'aime le " << getBoissonFavorite() << "." << endl;
 }
 
 void Cowboy::incrementePopularite() {
@@ -39,7 +36,7 @@ void Cowboy::decrementePopularite() {
 
 
 void Cowboy::tire(const Brigand& brigand) {
-	cout << getNom() << " tire sur " << brigand.getNom() << " !" << endl;
+	cout << "(" << nom << ") -- " << " Prends ca, rascal !" << endl;
 }
 
 void Cowboy::emprisonne(Brigand& brigand) {
@@ -48,7 +45,7 @@ void Cowboy::emprisonne(Brigand& brigand) {
 }
 
 void Cowboy::libere(Dame& dame) {
-	cout << getNom() << " libère " << dame.getNom() << " !" << endl;
+	cout << qualite << " " << getNom() << " libere " << dame.getNom() << " !" << endl;
 	incrementePopularite(); 
 }
 

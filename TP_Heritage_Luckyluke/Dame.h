@@ -3,6 +3,7 @@
 #include "Humain.h"
 #include <iostream>
 #include <string>
+#include "Cowboy.h"
 
 using namespace std;
 

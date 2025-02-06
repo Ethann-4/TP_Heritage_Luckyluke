@@ -1,12 +1,11 @@
 #include "Dame.h" 
 #include "Cowboy.h" 
 
-Brigand::Brigand(const string nom/*=""*/, const string boissonFavorite/*="tord-boyaux"*/, const string comportement/*="mechant"*/)
-	: Humain(nom, boissonFavorite), comportement(comportement),
-	nbDamesEnlevees(0), recompense(0), enPrison(false)
-{
-}
 
+
+Brigand::Brigand(const string nom, const string boissonFavorite, const string comportement, int recompense)
+	: Humain(nom, boissonFavorite), comportement(comportement),
+	nbDamesEnlevees(0), recompense(recompense), enPrison(false) {}
 
 string Brigand::getComportement() const
 {
@@ -25,8 +24,8 @@ int Brigand::getRecompense() const
 
 void Brigand::sePresente() const
 {
-	cout << "Coucou, je m'appelle " << getNom() << " et je suis " << comportement
-		<< ". J'adore le " << getBoissonFavorite() << "." << endl;
+	cout << "(" << nom << ") -- "<< "Bonjour, je suis " << getNom() << " et je suis le " << comportement
+		<< ". J'aime le " << getBoissonFavorite() << "." << endl;
 
 }
 
@@ -37,7 +36,7 @@ void Brigand::kidnappe(Dame& dame)
 		dame.seFaireKidnapper();
 		nbDamesEnlevees++;
 		augmenteRecompense();
-		cout << "Ah ah ! " << dame.getNom() << ", tu es mienne désormais !" << endl;
+		cout << "(" << nom << ") -- "  << "Ah ah ! " << dame.getNom() << ", tu es mienne desormais !" << endl;
 	}
 }
 
@@ -69,4 +68,14 @@ void Brigand::diminueRecompense(const int prix)
 bool Brigand::estEnPrison() const
 {
 	return enPrison;
+}
+
+void Brigand::prix()
+{
+	cout << "(" << nom << ") -- " << "Ma tete est mise a prix de " << recompense << " $ !" << endl;
+}
+
+void Brigand::nbDame()
+{
+	cout << "(" << nom << ") -- " << "J'ai l'air mechant et j'ai deja kidnappe " << nbDamesEnlevees << " dames !" << endl;
 }

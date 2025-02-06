@@ -13,7 +13,8 @@ class Cowboy;
 class Brigand : public Humain
 {
 public:
-	Brigand(const string nom = "", const string boissonFavorite = "tord-boyaux", const string comportement = "méchant");
+	Brigand(const string nom, const string boissonFavorite = "tord-boyaux",
+		const string comportement = "mechant", int recompense = 0);
 
 	string getComportement() const;
 	int getNbDamesEnlevees() const;
@@ -25,7 +26,8 @@ public:
 	void augmenteRecompense(const int prix = 100);
 	void diminueRecompense(const int prix = 100);
 	bool estEnPrison() const;
-
+	void prix() ;
+	void nbDame();
 private:
 	string comportement;
 	int nbDamesEnlevees;
