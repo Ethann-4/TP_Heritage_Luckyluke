@@ -18,6 +18,7 @@ public:
 	void changeDeRobe(const string nouvelleCouleur);
 	void boit() const;
 
+
 protected:
 	void hurle();
 	void remercie(const Cowboy & heros);

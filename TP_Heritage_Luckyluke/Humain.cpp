@@ -28,3 +28,13 @@ void Humain::sePresente() const {
 void Humain::boit() const {
 	cout << "(" << nom << ") -- Ah ! un bon verre de " << boissonFavorite << " ! GLOUPS !" << endl;
 }
+
+void Humain::sert() const
+{
+	cout << "(Robert) -- " << " Tiens " << getNom() << " un verre de " << getBoissonFavorite() << terminePhrase() << endl;
+}
+
+string Humain::terminePhrase() const
+{
+	return " mon gars.";
+}

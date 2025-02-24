@@ -5,7 +5,20 @@
 #include "Dame.h"
 #include "Cowboy.h"
 #include "Brigand.h"
+#include "Barman.h"
+
 using namespace std;
+
+void presentezVous(const Humain& humain)
+{
+	humain.sePresente();
+}
+
+void servire(const Humain& client)
+{
+	client.sert();
+}
+
 
 int main() {
 
@@ -24,6 +37,7 @@ int main() {
 	Cowboy cowboyLucky("Lucky Luke", "le vaillant", "le coco-cola");
 	Dame jenny("Jenny", "lait", "blanche");
 	Brigand brigandJoe("Joe", "tord-boyaux", "mechant", 100);
+	Barman Robert("Robert");
 
 	cout << "Histoire------3" << endl;
 	cowboyLucky.sePresente();
@@ -45,6 +59,17 @@ int main() {
 	brigandJoe.seFaitEmprisonner(cowboyLucky);
 	cowboyLucky.libere(jenny);
 	jenny.seFaitLiberer(cowboyLucky);
+	
+	
+	presentezVous(lucky);
+	presentezVous(jenny);
+	presentezVous(brigandJoe);
+	presentezVous(Robert);
+
+	servire(lucky);
+	servire(jenny);
+	servire(brigandJoe);
+
 
 	return 0;
 }

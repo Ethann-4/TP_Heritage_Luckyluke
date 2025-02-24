@@ -40,6 +40,7 @@ void Dame::boit() const {
 	cout << "(" << nom << ") -- Ah ! un bon verre de " << boissonFavorite << " ! GLOUPS !" << endl;
 }
 
+
 void Dame::hurle()
 {
 	cout << "(" << nom << ") -- AAAAHHH !!!" << endl;

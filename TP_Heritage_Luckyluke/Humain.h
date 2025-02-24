@@ -12,8 +12,10 @@ public:
 	string getBoissonFavorite() const;
 	void setBoissonFavorite(const string nouvelleBoissonFavorite);
 	string parle(const string texte) const;
-	void sePresente() const;
+	virtual void sePresente() const;
 	void boit() const;
+	virtual void sert() const;
+	string terminePhrase() const;
 
 protected:
 	string nom;
