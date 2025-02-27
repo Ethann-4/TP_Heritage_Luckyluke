@@ -11,7 +11,6 @@ public:
 
 	string getNomBar() const ;
 	string terminePhrase() const ;
-	void parle(const string texte) ;
 	void sePresente() const;
 	void sert(const Humain& client);
 
