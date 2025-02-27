@@ -6,6 +6,7 @@
 #include "Cowboy.h"
 #include "Brigand.h"
 #include "Barman.h"
+#include "Sherif.h"
 
 using namespace std;
 
@@ -38,6 +39,7 @@ int main() {
 	Dame jenny("Jenny", "lait", "blanche");
 	Brigand brigandJoe("Joe", "tord-boyaux", "mechant", 100);
 	Barman Robert("Robert");
+	Sherif clint("Clint");
 
 	cout << "Histoire------3" << endl;
 	cowboyLucky.sePresente();
@@ -60,7 +62,7 @@ int main() {
 	cowboyLucky.libere(jenny);
 	jenny.seFaitLiberer(cowboyLucky);
 	
-	
+	cout << "**histoire-4a**" << endl;
 	presentezVous(lucky);
 	presentezVous(jenny);
 	presentezVous(brigandJoe);
@@ -70,7 +72,15 @@ int main() {
 	servire(jenny);
 	servire(brigandJoe);
 
-
+	
+	cout << "**histoire-4b**" << endl;
+	presentezVous(cowboyLucky);
+	presentezVous(jenny);
+	presentezVous(brigandJoe);
+	presentezVous(Robert);
+	presentezVous(clint);
+	clint.rechercheBrigand(brigandJoe, 100);
+	clint.coffrerBrigand(brigandJoe);
 	return 0;
 }
 
