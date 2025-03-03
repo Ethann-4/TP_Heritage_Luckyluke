@@ -3,36 +3,41 @@
 
 #include <iostream>
 #include <string>
-#include "humain.h"
+#include "Humain.h"
+#include "Arme.h"
 
 using namespace std;
 
 class Dame;
 class Cowboy;
 
-class Brigand : public Humain
-{
+class Brigand : public Humain {
 public:
 	Brigand(const string nom, const string boissonFavorite = "tord-boyaux",
 		const string comportement = "mechant", int recompense = 0);
+	~Brigand();
 
 	string getComportement() const;
 	int getNbDamesEnlevees() const;
 	int getRecompense() const;
-
 	void sePresente() const;
-	void kidnappe(Dame& dame); 
-	void seFaitEmprisonner(Cowboy& cowboy); 
+	void kidnappe(Dame& dame);
+	void seFaitEmprisonner(Cowboy& cowboy);
 	void augmenteRecompense(const int prix = 100);
 	void diminueRecompense(const int prix = 100);
 	bool estEnPrison() const;
-	void prix() ;
+	void prix();
 	void nbDame();
+
+	void setArme(Arme* arme);
+	void tire(Cowboy& cowboy) const;
+
 private:
 	string comportement;
 	int nbDamesEnlevees;
 	int recompense;
 	bool enPrison;
+	Arme* arme;
 };
 
-#endif 
+#endif

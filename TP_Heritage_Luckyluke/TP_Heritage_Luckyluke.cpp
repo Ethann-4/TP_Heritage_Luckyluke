@@ -81,6 +81,28 @@ int main() {
 	presentezVous(clint);
 	clint.rechercheBrigand(brigandJoe, 100);
 	clint.coffrerBrigand(brigandJoe);
+
+	Arme* armeCowboy = new Arme("Smith & Wesson", 100, 1, 1);
+	Arme* armeBrigand = new Arme("Colt", 100, 6, 6);
+
+	cowboyLucky.setArme(armeCowboy);
+	brigandJoe.setArme(armeBrigand);
+
+	cout << "       DUEL        " << endl;
+	
+
+	cowboyLucky.sePresente();
+	brigandJoe.sePresente();
+
+	cout << "** Le duel commence **" << endl;
+
+	cowboyLucky.tire(brigandJoe);
+	brigandJoe.tire(cowboyLucky);
+	cowboyLucky.tire(brigandJoe);
+	cowboyLucky.recharge();
+	brigandJoe.tire(cowboyLucky);
+
+	cout << "** Fin du duel **" << endl;
 	return 0;
 }
 

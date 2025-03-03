@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Arme.cpp" />
     <ClCompile Include="Barman.cpp" />
     <ClCompile Include="Brigand.cpp" />
     <ClCompile Include="Cowboy.cpp" />
@@ -160,6 +161,7 @@
     <ClCompile Include="TP_Heritage_Luckyluke.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Arme.h" />
     <ClInclude Include="Barman.h" />
     <ClInclude Include="Brigand.h" />
     <ClInclude Include="Cowboy.h" />
